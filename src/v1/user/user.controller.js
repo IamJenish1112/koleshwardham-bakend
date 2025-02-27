@@ -130,7 +130,6 @@ exports.login = async (req, res) => {
       });
     }
     // generate token
-    console.log("request reached");
     const token = jwt.sign(
       { userId: user._id, email: user.email },
       process.env.JWT_SECRET_KEY,
