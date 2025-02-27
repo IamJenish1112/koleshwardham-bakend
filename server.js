@@ -24,6 +24,9 @@ const connection = require("./src/v1/config/connection/connection");
 connection();
 
 // Use the v1 router
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 app.use("/api/v1", v1Router);
 
 app.listen(port, () => {
